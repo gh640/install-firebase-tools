@@ -1,0 +1,17 @@
+name: 'Install firebase-tools'
+description: 'Install firebase-tools.'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install firebase-tools
+      run: |
+        USER_BIN="${HOME}/.local/bin"
+        mkdir -p "${USER_BIN}"
+        cd "${USER_BIN}"
+        curl -sL -o "firebase" https://github.com/firebase/firebase-tools/releases/download/${FIREBASE_TOOLS_VERSION}/firebase-tools-linux
+        chmod u+x firebase
+        echo "${USER_BIN}" >> $GITHUB_PATH
+      env:
+        FIREBASE_TOOLS_VERSION: "v13.7.1"
+      shell: bash
