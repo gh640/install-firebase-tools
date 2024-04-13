@@ -1,0 +1,21 @@
+name: Tests
+
+on:
+  pull:
+    paths-ignore:
+      - 'README.md'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./
+      - name: Locate firebase command
+        run: which firebase
+      - name: Run version command
+        run: firebase --version
