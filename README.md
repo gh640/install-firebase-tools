@@ -5,5 +5,5 @@ A GitHub Actions action to install `firebase-tools` binary.
 ## Usage
 
 ```yaml
-uses: gh640/install-firebase-tools@v13.8.3
+uses: gh640/install-firebase-tools@v13.9.0
 ```
