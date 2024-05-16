@@ -13,5 +13,5 @@ runs:
         chmod u+x firebase
         echo "${USER_BIN}" >> $GITHUB_PATH
       env:
-        FIREBASE_TOOLS_VERSION: "v13.8.3"
+        FIREBASE_TOOLS_VERSION: "v13.9.0"
       shell: bash
