@@ -21,3 +21,4 @@ jobs:
         run: which firebase
       - name: Run version command
         run: firebase --version
+    timeout-minutes: 10
